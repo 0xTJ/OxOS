@@ -23,6 +23,12 @@ fb/fb_vprintf.o \
 fb/fb_putchar.o \
 fb/fb_puts.o \
 serial/serial.o \
+interrupts/pic_remap.o \
+interrupts/pic_sendEoi.o \
+interrupts/pic_irrIsr.o \
+interrupts/pic_isRealIrq.o \
+interrupts/irq_mask.o \
+interrupts/isr.o \
 libk.a \
 crtend.o \
 crtn.o

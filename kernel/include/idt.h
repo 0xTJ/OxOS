@@ -1,5 +1,5 @@
-#ifndef INCLUDE_KERNEL_idt_H
-#define INCLUDE_KERNEL_idt_H
+#ifndef INCLUDE_KERNEL_IDT_H
+#define INCLUDE_KERNEL_IDT_H
 
 #include <stdint.h>
 
@@ -21,7 +21,7 @@ struct idtDescr {
 
 extern struct idtDescr idt[STATIC_IDT_SIZE];
 
-void addIdtDescr(struct idtDescr *target, struct idtDescrVals source);
+void idtSetEnt(struct idtDescr *target, uint16_t selector, uint32_t offset, uint8_t type, uint8_t priv);
 void setIdt(struct idtDescr *base, uint16_t limit);
 
-#endif	// INCLUDE_KERNEL_idt_H
+#endif	// INCLUDE_KERNEL_IDTS_H

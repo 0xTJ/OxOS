@@ -1,9 +1,16 @@
-#define PIC_EOI		0x20		/* End-of-interrupt command code */
+#include "pic.h"
+#include "io.h"
  
-void PIC_sendEOI(unsigned char irq)
-{
+void picSendEOI(unsigned char irq) {
 	if(irq >= 8)
-		outb(PIC2_COMMAND,PIC_EOI);
+		outb(PIC2_CMD,picEOI);
  
-	outb(PIC1_COMMAND,PIC_EOI);
+	outb(PIC1_CMD,picEOI);
+}
+
+void picSendEOISpurious(unsigned char irq){
+	if(irq >= 8)
+		outb(PIC2_CMD,picEOI);
+ 
+	outb(PIC1_CMD,picEOI);
 }

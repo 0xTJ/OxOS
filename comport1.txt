@@ -1,0 +1,12 @@
+INFO: Creating GDT structs
+INFO: Created GDT structs
+0, FFFFF, 1
+INFO: Adding GDT structs to table
+0
+CF
+CF
+INFO: Added GDT structs to table
+INFO: Loading GDT table
+INFO: Loaded GDT table
+INFO: Reloading segments
+INFO: Reloaded segments
